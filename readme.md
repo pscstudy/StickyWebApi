@@ -7,6 +7,22 @@
 * WebAPIのメソッドは、次のコントローラークラスに記述されています。
 `\Controllers\StickyController.cs`
 
+### 2020/9/17のハイライト
+
+[本編]
+* WebAPIには、RESTfulという設計方針がある。これに即して作られたWebAPIを、俗に「REST API」と呼ぶ。
+* RESTfulに従えば、GET(取得), POST(送信), PUT(置換), DELETE(削除)といったHttpメソッドを使い分ける必要がある。
+* ASP.NET Core MVCのControllerクラスでは、メソッドの属性を HttpGet, HttpPost, HttpPut, HttpDeleteと書き分けることで対応する。
+* RESTfulに従っていれば、みんなが直感的に理解しやすい設計になる。
+
+[基本]
+* Httpメソッドの仕様は、ここがおすすめ: https://developer.mozilla.org/ja/docs/Web/HTTP/Methods
+* POSTとPUTの使い分けはこれを読もう: https://developer.mozilla.org/ja/docs/Web/HTTP/Methods/POST
+* 今回は新規追加にPUTを使ったが、Restfulに従えば、POSTが正解。
+
+[おまけ]
+* リストを並び変える場合は、OrderByメソッド(System.Linq名前空間)を利用することができる。
+
 ### 2020/9/15のハイライト
 
 [基本]
